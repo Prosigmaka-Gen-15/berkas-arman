@@ -1,0 +1,89 @@
+* {
+  /* margin: 0px; */
+}
+body {
+  /* 
+  background-color: #fdfdfd;
+  background-image: url(img/prosigmaka.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top right; 
+  ada cara yang singkatnya untuk merangkum semua ini dengan cara seperti diluar komentar ini
+  */
+  background: #fdfdfd url(img/prosigmaka.png) no-repeat fixed right;
+  font-family: sans-serif;
+}
+h1 {
+  color: blue;
+  text-align: center;
+  text-decoration: underline;
+}
+h2 {
+  text-transform: uppercase;
+}
+#text_pendek {
+  font-size: 24px;
+  font-weight: bold;
+  background: yellow;
+  width: 50%;
+  height: 200px;
+  max-width: 30%;
+  max-height: 100px;
+  display: none;
+}
+#text_panjang {
+  text-align: justify;
+  text-indent: 30px;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  line-height: 20px;
+}
+#menu_web {
+  /* margin: top right bottom left; */
+  margin: 10px 0 50px 0;
+}
+.menu {
+  display: inline-block;
+  /* height: 50px;
+  width: 50px; */
+  text-decoration: none;
+  /* border-width: 3px;
+  border-style: solid;
+  border-color: black; */
+  border: 3px solid black;
+  padding: 10px 5;
+}
+/* kondisi biasa */
+.menu:link {
+  background-color: grey;
+  color: white;
+}
+/* kondisi setelah dikunjungi */
+.menu:visited {
+  background-color: grey;
+  color: yellow;
+}
+/* kondisi hover / mouse berada diatasnya */
+.menu:hover {
+  background-color: grey;
+  color: green;
+}
+/* kondisi sedang di klik */
+.menu:active {
+  background-color: grey;
+  color: red;
+}
+
+/* mangatur posisi di css */
+/* 1. static , 2. relative , 3. absolute , 4. fixed */
+#menu_member {
+  position: relative;
+  top: 70px;
+  left: 20px;
+}
+#h2_member {
+  background: yellow;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+}
