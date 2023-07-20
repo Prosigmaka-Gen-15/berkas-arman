@@ -45,6 +45,11 @@ nav {
   height: 20px;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 #logo span {
   margin-left: 0px;
 }
@@ -212,6 +217,12 @@ h2 {
     text-align: center;
     padding: 10px;
     color: #fff;
+  }
+  .logo-container {
+    width: 100%;
+  }
+  .nav-toggle:checked ~ .menu-content {
+    display: block;
   }
   .nav-toggle:checked ~ .nav-links {
     display: flex;
