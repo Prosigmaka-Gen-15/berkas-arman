@@ -22,7 +22,7 @@ nav {
   display: none;
 }
 .nav-toggle-label {
-  display: none;
+  /* display: none; */
   font-size: 30px;
   color: #fff;
   cursor: pointer;
