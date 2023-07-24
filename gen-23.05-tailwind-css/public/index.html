@@ -8,45 +8,81 @@
   </head>
   <body>
     <div class="container mx-auto">
-      <nav class="md:flex items-center justify-between mt-10 p-4 bg-green-500">
-        <div class="md:flex items-center">
-          <img src="img/keranjang.jpg" alt="keranjang" width="20" class="ml-3" />
-          <span class="text-2xl font-bold mr-24"> Shopcart </span>
-          <a class="mr-4 text-gray-900">Categories</a>
-          <a class="mr-4 text-gray-900">Deals</a>
-          <a class="mr-4 text-gray-900">What's new</a>
-          <a class="mr-4 text-gray-900">Delivery</a>
+      <nav class="md:flex flex-row items-center justify-between py-6 px-3 bg-green-500 drop-shadow-2xl m-5">
+        <div class="flex items-center w-30 h-8">
+          <img src="img/keranjang.jpg" alt="keranjang" class="h-full w-auto" /><span class="font-bold text-xl">Shopcart</span>
         </div>
-        <div>
-          <input type="search" class="bg-gray-200 mr-2 ml-4 py-1" />
-          <a class="mr-4">Account</a>
-          <a class="mr-4">Cart</a>
+        <div class="md:flex flex-row items-center space-x-4 justify-center list-none font-semibold text-sm">
+          <li>Categories</li>
+          <li>Deals</li>
+          <li>What's New</li>
+          <li>Delivery</li>
+        </div>
+        <div class="md:flex flex-row list-none space-x-4 font-semibold text-sm items-end justify-end pl-10">
+          <input type="search" class= "rounded-xl " placeholder="Search Product">
+          <li>Account</li>
+          <li>Cart</li>
         </div>
       </nav>
-      <section class="flex mt-10">
-        <div class="text-center w-4/6">
-          <img class="block mx-auto items-start" src="img/Wireless Earbuds.jpg" />
-          <img class="inline-block mx-auto border-r-2" src="img/Wireless Earbuds.jpg" width="80" />
-          <img class="inline-block mx-auto border-r-2" src="img/Wireless Earbuds.jpg" width="80" />
-          <img class="inline-block mx-auto border-r-2" src="img/Wireless Earbuds.jpg" width="80" />
+      <section class="md:flex mt-10">
+        <div class="md:flex flex-col mx-52 py-10">
+      <div class="md:flex flex-row gap-6">
+        <div class="md:flex flex-col justify-center items-center space-y-2">
+          <div
+            class="md:flex flex-col justify-center items-center bg-gray-200 w-96 h-96 space-y-2 hover:">
+            <img src="img/Wireless Earbuds.jpg" class="w-auto h-80 hover:scale-110 transition-transform duration-500 ease-in-out" />
+          </div>
+          <div class="grid w-full grid-cols-4 gap-4">
+            <div class="flex justify-center items-center h-24 bg-gray-200">
+              <img src="img/Wireless Earbuds.jpg" class="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            </div>
+            <div class="flex justify-center items-center h-24 bg-gray-200">
+              <img src="img/Wireless Earbuds.jpg" class="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            </div>
+            <div class="flex justify-center items-center h-24 bg-gray-200">
+              <img src="img/Wireless Earbuds.jpg" class="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            </div>
+            <div class="flex justify-center items-center h-24 bg-gray-200">
+              <img src="img/Wireless Earbuds.jpg" class="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            </div>
+          </div>
         </div>
-        <div class="block shadow-md text-center p-5 w-4/6">
-          <h1 class="font-bold text-xl text-left">Airpods- Max</h1>
-          <p class="text-gray-500 text-left">Eu magna laboris ullamco sint commodo fugiat mollit mollit reprehenderit.</p>
-          <p class="text-gray-500 text-left">*****(121)</p>
-          <h1 class="shadow-md mt-2">
-            <p class="text-left font-bold text-xl">$ 549.00 or 99.99/month</p>
-            <p class="text-gray-500 text-left">Consectetur do culpa mollit elit cupidatat deserunt quis consequat nulla velit ullamco.</p>
-          </h1>
-          <p class="shadow-md text-left font-bold text-sm mt-4">Choose a Color</p>
-          <button class="text-green-700 bg-gray-200 py-2 rounded-md w-14">- 1 +</button>
-          <p>asdfdfasd</p>
-          <div class="flex justify-around my-2">
-            <a class="text-sm rounded-md bg-red-900">Add to Cart</a>
-            <a class="text-sm rounded-md bg-green-800">Buy Now</a>
+        <div class="flex flex-col ml-19">
+          <div class="flex flex-col shadow-sm">
+            <h1 class="font-bold text-4xl hover:text-green-600">Airpods-Max</h1>
+            <p>Non eiusmod adipisicing occaecat commodo nulla reprehenderit non dolore sunt dolore amet cupidatat.</p>
+          </div>
+          <div class="flex flex-col shadow-sm mt-3">
+            <p class="font-bold text-2xl">$549 or 99.99/month</p>
+            <p>Pariatur ullamco adipisicing magna sint.</p>
+          </div>
+          <div class="flex flex-col shadow-sm mt-3">
+            <h1 class="font-bold text-2xl">Chose a Color</h1>
+            <div class="flex gap-2 pt-5 pb-5">
+              <button class="ml-2 w-8 h-8 flex bg-gradient-to-b from-red-700 to-pink-500 hover:to-red-800 rounded-full"></button>
+              <button class="ml-2 w-8 h-8 flex bg-gradient-to-b from-gray-600 to-black hover:to-gray-800 rounded-full"></button>
+              <button class="ml-2 w-8 h-8 flex bg-gradient-to-b from-green-400 to-gray-800 hover:to-green-600 rounded-full"></button>
+              <button class="ml-2 w-8 h-8 flex bg-gradient-to-b from-blue-900 to-gray-500 hover:to-blue-500 rounded-full"></button>
+            </div>
+          </div>
+          <div class="flex flex-row shadow-sm mt-3 ">
+            <div class="flex flex-row w-24 justify-between px-3 py-1 border border-gray-400 items-center rounded-full bg-gray-200">
+              <button class="w-4 h-4 flex items-center justify-center  text-green-700 rounded-full"> - </button>
+              <p class="text-green-700"> 1 </p>
+              <button class="w-4 h-4 flex items-center justify-center text-green-700 rounded-full"> + </button>
+            </div>
+            <p class="ml-5 ">Only <span class="text-orange-500">12 items</span> Left<br/>Don't miss it</p>
+          </div>
+          <div class="flex flex-row shadow-sm mt-3 gap-4 p-6">
+            <button class="flex justify-center items-center w-36 px-3 bg-green-700 rounded-2xl  text-white hover:bg-green-900">Buy Now</button>
+            <button class="flex justify-center items-center w-40 px-9 border border-green-800 rounded-2xl  text-green-700 hover:bg-green-800 hover:text-white">Add to Cart</button>
+          </div>
           </div>
         </div>
       </section>
     </div>
+    <footer class="bg-green-900 text-white p-4 text-center mt-40">
+      &copy; 2023. yu dibeli dulu yu 
+    </footer>
   </body>
 </html>
