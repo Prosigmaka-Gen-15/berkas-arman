@@ -6,30 +6,29 @@
     <title>tailwind css</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
-    <div class="container mx-auto">
-      <nav class="md:flex flex-row items-center justify-between py-6 px-3 bg-green-500 drop-shadow-2xl m-5">
-        <div class="flex items-center w-30 h-8">
-          <img src="img/keranjang.jpg" alt="keranjang" class="h-full w-auto" /><span class="font-bold text-xl">Shopcart</span>
-        </div>
-        <div class="md:flex flex-row items-center space-x-4 justify-center list-none font-semibold text-sm">
+    <nav class="py-6 px-3 bg-green-500 drop-shadow-2xl mb-5">
+      <section class="container mx-auto lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
+        <div class="flex items-center w-30 h-8"><img src="img/keranjang.jpg" alt="keranjang" class="h-full w-auto" /><span class="font-bold text-xl">Shopcart</span></div>
+        <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-4 justify-center list-none font-semibold text-sm">
           <li>Categories</li>
           <li>Deals</li>
           <li>What's New</li>
           <li>Delivery</li>
         </div>
-        <div class="md:flex flex-row list-none space-x-4 font-semibold text-sm items-end justify-end pl-10">
-          <input type="search" class= "rounded-xl " placeholder="Search Product">
+        <div class="flex flex-col lg:flex-row list-none gap-2 lg:gap-4 font-semibold text-sm items-center lg:pl-10">
+          <input type="search" class="rounded-xl p-2" placeholder="Search Product" />
           <li>Account</li>
           <li>Cart</li>
         </div>
-      </nav>
-      <section class="md:flex mt-10">
-        <div class="md:flex flex-col mx-52 py-10">
-      <div class="md:flex flex-row gap-6">
-        <div class="md:flex flex-col justify-center items-center space-y-2">
-          <div
-            class="md:flex flex-col justify-center items-center bg-gray-200 w-96 h-96 space-y-2 hover:">
+      </section>
+    </nav>
+
+    <section class="mt-10 container mx-auto lg:px-12">
+      <div class="flex flex-col lg:flex-row gap-6">
+        <div class="flex flex-col justify-center items-center space-y-2">
+          <div class="flex flex-col justify-center items-center bg-gray-200 w-96 h-96 space-y-2 hover:">
             <img src="img/Wireless Earbuds.jpg" class="w-auto h-80 hover:scale-110 transition-transform duration-500 ease-in-out" />
           </div>
           <div class="grid w-full grid-cols-4 gap-4">
@@ -65,24 +64,22 @@
               <button class="ml-2 w-8 h-8 flex bg-gradient-to-b from-blue-900 to-gray-500 hover:to-blue-500 rounded-full"></button>
             </div>
           </div>
-          <div class="flex flex-row shadow-sm mt-3 ">
+          <div class="flex flex-row shadow-sm mt-3">
             <div class="flex flex-row w-24 justify-between px-3 py-1 border border-gray-400 items-center rounded-full bg-gray-200">
-              <button class="w-4 h-4 flex items-center justify-center  text-green-700 rounded-full"> - </button>
-              <p class="text-green-700"> 1 </p>
-              <button class="w-4 h-4 flex items-center justify-center text-green-700 rounded-full"> + </button>
+              <button class="w-4 h-4 flex items-center justify-center text-green-700 rounded-full">-</button>
+              <p class="text-green-700">1</p>
+              <button class="w-4 h-4 flex items-center justify-center text-green-700 rounded-full">+</button>
             </div>
-            <p class="ml-5 ">Only <span class="text-orange-500">12 items</span> Left<br/>Don't miss it</p>
+            <p class="ml-5">Only <span class="text-orange-500">12 items</span> Left<br />Don't miss it</p>
           </div>
           <div class="flex flex-row shadow-sm mt-3 gap-4 p-6">
-            <button class="flex justify-center items-center w-36 px-3 bg-green-700 rounded-2xl  text-white hover:bg-green-900">Buy Now</button>
-            <button class="flex justify-center items-center w-40 px-9 border border-green-800 rounded-2xl  text-green-700 hover:bg-green-800 hover:text-white">Add to Cart</button>
-          </div>
+            <button class="flex justify-center items-center w-36 px-3 bg-green-700 rounded-2xl text-white hover:bg-green-900">Buy Now</button>
+            <button class="flex justify-center items-center w-40 px-9 border border-green-800 rounded-2xl text-green-700 hover:bg-green-800 hover:text-white">Add to Cart</button>
           </div>
         </div>
-      </section>
-    </div>
-    <footer class="bg-green-900 text-white p-4 text-center mt-40">
-      &copy; 2023. yu dibeli dulu yu 
-    </footer>
+      </div>
+    </section>
+
+    <footer class="bg-green-900 text-white p-4 text-center mb-40">&copy; 2023. yu dibeli dulu yu</footer>
   </body>
 </html>
