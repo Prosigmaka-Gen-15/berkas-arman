@@ -13,3 +13,11 @@ imageGrid.addEventListener("click", (event) => {
     mainImage.querySelector("img").setAttribute("src", clickedImageUrl);
   }
 });
+const colorButtons = document.querySelectorAll(".flex.flex-col.ml-19 button");
+colorButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedColor = button.getAttribute("data-warna");
+
+    mainImage.querySelector("img").setAttribute("src", `img/${selectedColor}.jpg`);
+  });
+});
