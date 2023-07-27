@@ -1,4 +1,4 @@
-import keranjang from "../assets/keranjang.jpg";
+import keranjang from "../../public/img/keranjang.jpg";
 export default function Navbar() {
   return (
     <nav className="py-6 px-3 bg-green-500 drop-shadow-2xl mb-5 ml-3 mr-3 mt-3">
