@@ -3,7 +3,8 @@ import { useState } from "react";
 import pink from "../assets/pink.jpg";
 import pinkAwal from "../assets/pinkAwal.jpg";
 import pinkSamping from "../assets/pinkSamping.jpg";
-import pinkTutup from "/src/assets/pinkTutup.jpg";
+import pinkTutup from "../assets/pinkTutup.jpg";
+// belum responsif
 
 const MainContent = () => {
   const [gambarAwal, setGambar] = useState(pinkAwal);

@@ -1,7 +1,7 @@
 export default function Content() {
   return (
-    <div className="flex mx-auto justify-between gap-2 lg:gap-0 my-4">
-      <div className="flex-wrap lg:flex-row items-center">
+    <div className="flex mx-auto justify-between my-4">
+      <div className="flex-col lg:gap-2 items-center">
         <Button coba="Headphone Type" />
         <Button coba="Price" />
         <Button coba="Review" />
@@ -17,5 +17,5 @@ export default function Content() {
   );
 }
 function Button(props) {
-  return <button className={"text-white bg-gray-500 text-center rounded-xl hover:bg-green-700 ml-3 px-2"}>{props.coba}</button>;
+  return <button className={"text-white bg-gray-500 text-center rounded-xl hover:bg-green-700 ml-3 my-2 px-2 "}>{props.coba}</button>;
 }

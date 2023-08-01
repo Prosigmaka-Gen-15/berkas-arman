@@ -2,8 +2,9 @@ import { useNavigate } from "react-router-dom";
 import keranjang from "/src/img/keranjang.jpg";
 const Navbar = () => {
   const navigate = useNavigate();
+
   return (
-    <nav className="py-6 px-3 bg-green-500 drop-shadow-2xl mb-5 ml-3 mr-3 mt-3">
+    <nav className="py-6 px-3 bg-green-500 drop-shadow-2xl mb-5 ml-3 mr-3 mt-3 ">
       <section className="container mx-auto lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
         <div onClick={() => navigate("/")} className="flex items-center w-30 h-8 cursor-pointer">
           <img src={keranjang} alt="keranjang" className="h-full w-auto" />
