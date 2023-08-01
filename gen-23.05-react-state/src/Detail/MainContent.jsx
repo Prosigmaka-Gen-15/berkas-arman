@@ -1,10 +1,11 @@
+import React from "react";
 import { useState } from "react";
-import pink from "../assets/img/pink.jpg";
-import pinkAwal from "../assets/img/pinkAwal.jpg";
-import pinkSamping from "../assets/img/pinkSamping.jpg";
-import pinkTutup from "/src/assets/img/pinkTutup.jpg";
+import pink from "../assets/pink.jpg";
+import pinkAwal from "../assets/pinkAwal.jpg";
+import pinkSamping from "../assets/pinkSamping.jpg";
+import pinkTutup from "/src/assets/pinkTutup.jpg";
 
-const Card = () => {
+const MainContent = () => {
   const [gambarAwal, setGambar] = useState(pinkAwal);
   const [angkaAwal, setAngka] = useState(1);
   return (
@@ -70,4 +71,5 @@ const Card = () => {
     </section>
   );
 };
-export default Card;
+
+export default MainContent;

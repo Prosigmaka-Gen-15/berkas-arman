@@ -1,16 +1,15 @@
-// import { useState } from 'react'
-import "./App.css";
-import Card from "./component/Card";
-import Content from "./component/Content";
-import Navbar from "./component/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Page/Home";
+import Detail from "./Page/Detail";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Content />
-      <Card />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/detail" element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
