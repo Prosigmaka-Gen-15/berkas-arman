@@ -3,12 +3,11 @@ import MainContent from "../Detail/MainContent";
 import Navbar from "../Home/Navbar";
 
 const Detail = () => {
-  const { detailId } = useParams();
   const [item, setItem] = useState({});
 
   const getProduct = async () => {
     try {
-      let response = await axios.get(" http://localhost:3000/posts" + detailId);
+      let response = await axios.get(" http://localhost:3000/posts");
       setItem(response.data);
     } catch (e) {
       console.log(e.message);
