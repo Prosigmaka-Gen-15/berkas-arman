@@ -6,38 +6,38 @@ import pinkSamping from "../assets/pinkSamping.jpg";
 import pinkTutup from "../assets/pinkTutup.jpg";
 // belum responsif
 
-const MainContent = () => {
+const MainContent = ({ item }) => {
   const [gambarAwal, setGambar] = useState(pinkAwal);
   const [angkaAwal, setAngka] = useState(1);
+
   return (
     <section className="flex my-8 mx-12 container m-3 lg:px-12 ">
       <div className="flex flex-col w-2/6 m-3 shadow-md ">
         <div className="flex flex-col bg-gray-100 justify-center items-center ">
-          <img src={gambarAwal} alt={pink} className="w-auto h-96 hover:scale-110 transition-transform duration-500 ease-in-out" />
+          <img src={item.img} alt={pink} className="w-auto h-96 hover:scale-110 transition-transform duration-500 ease-in-out" />
         </div>
         <div className="flex flex-row gap-4 py-2 my-2 justify-between items-center">
           <div className="flex gap-2 h-24 w-auto bg-gray-100 py-2 m-2">
-            <img onClick={() => setGambar(pinkAwal)} src={pinkAwal} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            <img onClick={() => setGambar(pinkAwal)} src={item.img2} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
           </div>
           <div className="flex gap-2 h-24 w-auto bg-gray-100 py-2 m-2">
-            <img onClick={() => setGambar(pinkSamping)} src={pinkSamping} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            <img onClick={() => setGambar(pinkSamping)} src={item.img3} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
           </div>
           <div className="flex gap-2 h-24 w-auto bg-gray-100 py-2 m-2">
-            <img onClick={() => setGambar(pinkTutup)} src={pinkTutup} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            <img onClick={() => setGambar(pinkTutup)} src={item.img4} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
           </div>
           <div className="flex gap-2 h-24 w-auto bg-gray-100 py-2 m-2">
-            <img onClick={() => setGambar(pink)} src={pink} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            <img onClick={() => setGambar(pink)} src={item.img} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
           </div>
         </div>
       </div>
       <div className="flex flex-col ml-19">
         <div className="flex flex-col shadow-sm">
-          <h1 className="font-bold text-4xl hover:text-green-600">Airpods-Max</h1>
-          <p>Non eiusmod adipisicing occaecat commodo nulla reprehenderit non dolore sunt dolore amet cupidatat.</p>
+          <h1 className="font-bold text-4xl hover:text-green-600">{item.namaProduct}</h1>
         </div>
         <div className="flex flex-col shadow-sm mt-3">
-          <p className="font-bold text-2xl">$549 or 99.99/month</p>
-          <p>Pariatur ullamco adipisicing magna sint.</p>
+          <p className="font-bold text-2xl">{item.hargaProduct}</p>
+          <p>{item.KeteranganProduct}</p>
         </div>
         <div className="flex flex-col shadow-sm mt-3">
           <h1 className="font-bold text-2xl">Chose a Color</h1>
