@@ -6,7 +6,6 @@ import Header from "../Home/Header";
 
 const Home = () => {
   const [products, setProduct] = useState([]);
-  const [isPopupShow, setisPopupShow] = useState(true);
 
   const getProduct = async () => {
     try {
