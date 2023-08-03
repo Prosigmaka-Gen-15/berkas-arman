@@ -6,7 +6,7 @@ import pinkSamping from "../assets/pinkSamping.jpg";
 import pinkTutup from "../assets/pinkTutup.jpg";
 // belum responsif
 
-const MainContent = () => {
+const MainContent = ({ item }) => {
   const [gambarAwal, setGambar] = useState(pinkAwal);
   const [angkaAwal, setAngka] = useState(1);
   return (
@@ -32,7 +32,7 @@ const MainContent = () => {
       </div>
       <div className="flex flex-col ml-19">
         <div className="flex flex-col shadow-sm">
-          <h1 className="font-bold text-4xl hover:text-green-600">Airpods-Max</h1>
+          <h1 className="font-bold text-4xl hover:text-green-600">{item.namaProduct}</h1>
           <p>Non eiusmod adipisicing occaecat commodo nulla reprehenderit non dolore sunt dolore amet cupidatat.</p>
         </div>
         <div className="flex flex-col shadow-sm mt-3">
