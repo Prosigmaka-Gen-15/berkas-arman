@@ -9,7 +9,9 @@ const Form = () => {
       <div className="w-full py-6 px-6 mx-auto flex flex-col gap-5 ">
         <div className="flex justify-between">
           <h1 className="text-2xl font-bold">List Product</h1>
-          <button className="bg-yellow-400 p-2 rounded-md text-black font-semibold ">Add Product</button>
+          <button onClick={() => setFormIsOpen(true)} className="bg-yellow-400 p-2 rounded-md text-black font-semibold ">
+            Add Product
+          </button>
         </div>
       </div>
       <div className="w-full flex">
@@ -64,7 +66,7 @@ const Form = () => {
           </tbody>
         </table>
       </div>
-      <AddProduct />
+      {formIsOpen && <AddProduct setFormIsOpen={setFormIsOpen} />}
     </div>
   );
 };
