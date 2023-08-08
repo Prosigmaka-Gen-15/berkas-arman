@@ -19,76 +19,16 @@
       "harga": 10000
     },
     {
-      "harga": 120000,
-      "detail": "celana bola yang bagus",
-      "nama": "celana",
+      "harga": 23989,
+      "desc": "mobile legends",
+      "nama": "miya",
       "id": 4
     },
     {
-      "harga": 234,
-      "detail": "asdfasd",
-      "nama": "bahan",
+      "harga": 2343,
+      "desc": "marskman",
+      "nama": "layla",
       "id": 5
-    },
-    {
-      "harga": 2134121,
-      "detail": "sadfasd",
-      "nama": "celana bola",
-      "id": 6
-    },
-    {
-      "harga": 2134121,
-      "detail": "sadfasd",
-      "nama": "celana bola",
-      "id": 7
-    },
-    {
-      "harga": 1232,
-      "detail": "qwewrqwe",
-      "nama": "celanawawer",
-      "id": 8
-    },
-    {
-      "harga": 123213,
-      "detail": "sadfasd",
-      "nama": "asfdasd",
-      "id": 9
-    },
-    {
-      "harga": 123213,
-      "detail": "sdfas",
-      "nama": "sgvas",
-      "id": 10
-    },
-    {
-      "harga": 123213,
-      "detail": "sdfas",
-      "nama": "sgvas",
-      "id": 11
-    },
-    {
-      "harga": 123213,
-      "detail": "sdfas",
-      "nama": "sgvas",
-      "id": 12
-    },
-    {
-      "harga": 123213,
-      "detail": "sdfas",
-      "nama": "sgvas",
-      "id": 13
-    },
-    {
-      "harga": 2143214,
-      "detail": "sdafasdf",
-      "nama": "asdfas",
-      "id": 14
-    },
-    {
-      "harga": 5000,
-      "desc": "mudah pecah ",
-      "nama": "gelas",
-      "id": 15
     }
   ]
 }

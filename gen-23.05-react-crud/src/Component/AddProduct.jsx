@@ -3,19 +3,23 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+// import { useNavigate, useParams } from "react-router-dom";
 const schema = yup.object().shape({
   nama: yup.string().required(),
   desc: yup.string().required(),
   harga: yup.number().integer().positive().required(),
 });
-const AddProduct = ({ setFormIsOpen }) => {
-  const navigate = useNavigate;
-  const { productId } = useParams();
+const AddProduct = ({ setFormIsOpen, id, getProducts }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+  } = useForm({ resolver: yupResolver(schema) });
 
   const getProduct = () => {
     axios
-      .get("http://localhost:3000/admin/" + productId)
+      .get("http://localhost:3000/admin/" + id)
       .then((ress) => {
         setValue("nama", ress.data.nama);
         setValue("desc", ress.data.desc);
@@ -24,16 +28,12 @@ const AddProduct = ({ setFormIsOpen }) => {
       .catch((err) => alert(err));
   };
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({ resolver: yupResolver(schema) });
-
   const onSubmit = async (data) => {
     try {
-      if (productId) await axios.post("http://localhost:3000/admin/" + productId, data);
+      if (id) await axios.patch("http://localhost:3000/admin/" + id, data);
       else await axios.post("http://localhost:3000/admin", data);
+      setFormIsOpen(false);
+      getProducts();
     } catch (err) {
       alert(err);
       console.log(err);
@@ -41,8 +41,8 @@ const AddProduct = ({ setFormIsOpen }) => {
     window.location.reload();
   };
   useEffect(() => {
-    if (productId) getProduct();
-  }, [productId]);
+    if (id) getProduct();
+  }, [id]);
 
   return (
     <>

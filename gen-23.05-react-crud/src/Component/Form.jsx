@@ -6,15 +6,34 @@ import { useForm } from "react-hook-form";
 const Form = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
   const [product, setProduct] = useState([]);
+  const [productIds, setProductIds] = useState(0);
 
   const getProduct = () => {
     axios
-      .get("http://localhost:3000/admin ")
+      .get("http://localhost:3000/admin")
       .then((response) => setProduct(response.data))
       .catch((error) => {
         alert(error);
         console.log(error);
       });
+  };
+
+  const handleOpenProduct = (productId) => {
+    console.log(productId);
+    if (productId) {
+      setProductIds(productId);
+    }
+    setFormIsOpen(true);
+  };
+
+  const deleteProduct = (productId) => {
+    const shouldDelete = window.confirm("Are you sure you want to delete this product");
+    if (shouldDelete) {
+      axios
+        .delete("http://localhost:3000/admin/" + productId)
+        .then(() => getProduct())
+        .catch((err) => alert(err));
+    }
   };
   useEffect(() => {
     getProduct();
@@ -50,17 +69,21 @@ const Form = () => {
                 <td className="text-center px-2 py-2 border">{product.desc}</td>
                 <td className="text-center px-2 py-2 border">{product.harga}</td>
                 <td className="text-center px-2 py-2 border">
-                  <button className="bg-yellow-400 px-4 py-2 rounded-md font-semibold">Edit</button>
+                  <button onClick={() => handleOpenProduct(product.id)} className="bg-yellow-400 px-4 py-2 rounded-md font-semibold">
+                    Edit
+                  </button>
                 </td>
                 <td className="text-center px-2 py-2 border">
-                  <button className="bg-red-600 px-4 py-2 rounded-md font-semibold">Delete</button>
+                  <button onClick={() => deleteProduct(product.id)} className="bg-red-600 px-4 py-2 rounded-md font-semibold">
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      {formIsOpen && <AddProduct setFormIsOpen={setFormIsOpen} />}
+      {formIsOpen && <AddProduct setFormIsOpen={setFormIsOpen} id={productIds} getProducts={getProduct} />}
     </div>
   );
 };
