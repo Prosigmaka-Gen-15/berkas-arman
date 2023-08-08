@@ -1,0 +1,94 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "nama": "Sepatu Futsal",
+      "desc": "Ad enim in magna ullamco incididunt aliqua commodo nisi dolore laboris mollit eu.",
+      "harga": 200000
+    },
+    {
+      "id": 2,
+      "nama": "Baju Futsal",
+      "desc": "Officia cupidatat minim minim ullamco deserunt irure ut nostrud id incididunt fugiat eu cillum.",
+      "harga": 150000
+    },
+    {
+      "id": 3,
+      "nama": "kaos kaki Futsal",
+      "desc": "Commodo ad ullamco fugiat ad fugiat esse dolore dolore officia officia eu anim.",
+      "harga": 10000
+    },
+    {
+      "harga": 120000,
+      "detail": "celana bola yang bagus",
+      "nama": "celana",
+      "id": 4
+    },
+    {
+      "harga": 234,
+      "detail": "asdfasd",
+      "nama": "bahan",
+      "id": 5
+    },
+    {
+      "harga": 2134121,
+      "detail": "sadfasd",
+      "nama": "celana bola",
+      "id": 6
+    },
+    {
+      "harga": 2134121,
+      "detail": "sadfasd",
+      "nama": "celana bola",
+      "id": 7
+    },
+    {
+      "harga": 1232,
+      "detail": "qwewrqwe",
+      "nama": "celanawawer",
+      "id": 8
+    },
+    {
+      "harga": 123213,
+      "detail": "sadfasd",
+      "nama": "asfdasd",
+      "id": 9
+    },
+    {
+      "harga": 123213,
+      "detail": "sdfas",
+      "nama": "sgvas",
+      "id": 10
+    },
+    {
+      "harga": 123213,
+      "detail": "sdfas",
+      "nama": "sgvas",
+      "id": 11
+    },
+    {
+      "harga": 123213,
+      "detail": "sdfas",
+      "nama": "sgvas",
+      "id": 12
+    },
+    {
+      "harga": 123213,
+      "detail": "sdfas",
+      "nama": "sgvas",
+      "id": 13
+    },
+    {
+      "harga": 2143214,
+      "detail": "sdafasdf",
+      "nama": "asdfas",
+      "id": 14
+    },
+    {
+      "harga": 5000,
+      "desc": "mudah pecah ",
+      "nama": "gelas",
+      "id": 15
+    }
+  ]
+}
