@@ -1,0 +1,34 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "nama": "Sepatu Futsal",
+      "desc": "Ad enim in magna ullamco incididunt aliqua commodo nisi dolore laboris mollit eu.",
+      "harga": 200000
+    },
+    {
+      "id": 2,
+      "nama": "Baju Futsal",
+      "desc": "Officia cupidatat minim minim ullamco deserunt irure ut nostrud id incididunt fugiat eu cillum.",
+      "harga": 150000
+    },
+    {
+      "id": 3,
+      "nama": "kaos kaki Futsal",
+      "desc": "Commodo ad ullamco fugiat ad fugiat esse dolore dolore officia officia eu anim.",
+      "harga": 10000
+    },
+    {
+      "harga": 23989,
+      "desc": "mobile legends",
+      "nama": "miya",
+      "id": 4
+    },
+    {
+      "harga": 2343,
+      "desc": "marskman",
+      "nama": "layla",
+      "id": 5
+    }
+  ]
+}

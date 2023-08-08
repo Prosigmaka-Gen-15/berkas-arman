@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "namaProduct": "Wireless Earbuds",
+      "hargaProduct": "159.000",
+      "KeteranganProduct": "Pariatur labore mollit aute deserunt ex.",
+      "img": "/src/img/Wireless Earbuds.jpg",
+      "img2": "/src/img/Wireless Earbuds2",
+      "img3": "/src/img/Wireless Earbuds3",
+      "img4": "/src/img/Wireless Earbuds4"
+    },
+    {
+      "id": 2,
+      "namaProduct": "AirPods Max",
+      "hargaProduct": "300.000",
+      "KeteranganProduct": "Pariatur labore mollit aute deserunt ex.",
+      "img": "/src/img/pink.jpg"
+    },
+    {
+      "id": 3,
+      "namaProduct": "Bose BT Earphones",
+      "hargaProduct": "2.000.000",
+      "KeteranganProduct": "Pariatur labore mollit aute deserunt ex.",
+      "img": "/src/img/bose bt.jpg"
+    },
+    {
+      "id": 4,
+      "namaProduct": "VIVEFOX Headphones",
+      "hargaProduct": "255.000",
+      "KeteranganProduct": "Pariatur labore mollit aute deserunt ex.",
+      "img": "/src/img/vivefox.jpg"
+    },
+    {
+      "id": 5,
+      "namaProduct": "JBL Tune",
+      "hargaProduct": "940.000",
+      "KeteranganProduct": "Pariatur labore mollit aute deserunt ex.",
+      "img": "/src/img/jbl tune.jpg"
+    },
+    {
+      "id": 6,
+      "namaProduct": "TAGRY Bluetooth",
+      "hargaProduct": "549.000",
+      "KeteranganProduct": "Pariatur labore mollit aute deserunt ex.",
+      "img": "/src/img/tagry.jpg"
+    },
+    {
+      "id": 7,
+      "namaProduct": "Monster MNFLEX",
+      "hargaProduct": "399.000",
+      "KeteranganProduct": "Pariatur labore mollit aute deserunt ex.",
+      "img": "/src/img/monster.jpg"
+    },
+    {
+      "id": 8,
+      "namaProduct": "MPOW",
+      "hargaProduct": "199.000",
+      "KeteranganProduct": "Pariatur labore mollit aute deserunt ex.",
+      "img": "/src/img/mpow.jpg"
+    }
+  ]
+}
