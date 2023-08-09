@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import keranjang from "/src/img/keranjang.jpg";
-import { useState } from "react";
-
+import { useSelector } from "react-redux";
+import { selectCartCount } from "../store/Selectors";
 const Navbar = (cart) => {
   const navigate = useNavigate();
+  const cartCount = useSelector(selectCartCount);
 
   return (
     <nav className="py-6 px-3 bg-green-500 drop-shadow-2xl mb-5 ml-3 mr-3 mt-3 ">
@@ -21,8 +22,7 @@ const Navbar = (cart) => {
         <div className="flex flex-col lg:flex-row list-none gap-2 lg:gap-4 font-semibold text-sm items-center lg:pl-10 cursor-pointer">
           <input type="search" className="rounded-xl p-2" placeholder="Search Product" />
           <li onClick={() => navigate("/admin")}>Admin</li>
-          <li onClick={() => navigate("/keranjang")}>Cart</li>
-          {/* <li onClick={() => navigate("/keranjang")}>{`Cart ${cart}`}</li> */}
+          <li onClick={() => navigate("/keranjang")}>Cart ({cartCount})</li>
         </div>
       </section>
     </nav>

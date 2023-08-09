@@ -1,10 +1,21 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import pink from "../assets/pink.jpg";
+import { useDispatch } from "react-redux";
+import { AddProduct } from "../Store/ProductSlice";
 
 const MainContent = ({ item }) => {
-  const [gambarAwal, setGambar] = useState("");
+  const [gambarAwal, setGambar] = useState(item.img);
   const [angkaAwal, setAngka] = useState(1);
+  const dispatch = useDispatch();
+
+  const onSubmit = () => {
+    const data = {
+      nama: item.namaProduct,
+      harga: item.hargaProduct,
+      gambar: item.img,
+    };
+    dispatch(AddProduct(data));
+  };
 
   useEffect(() => {
     setGambar(item.img);
@@ -14,20 +25,20 @@ const MainContent = ({ item }) => {
     <section className="flex my-8 mx-12 container m-3 lg:px-12 ">
       <div className="flex flex-col w-2/6 m-3 shadow-md ">
         <div className="flex flex-col bg-gray-100 justify-center items-center ">
-          <img src={item.img} alt={pink} className="w-auto h-96 hover:scale-110 transition-transform duration-500 ease-in-out" />
+          <img src={gambarAwal} className="w-auto h-96 hover:scale-110 transition-transform duration-500 ease-in-out" />
         </div>
         <div className="flex flex-row gap-4 py-2 my-2 justify-between items-center">
           <div className="flex gap-2 h-24 w-auto bg-gray-100 py-2 m-2">
-            <img onClick={() => setGambar(item.img2)} src={item.img2} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            <img onClick={() => setGambar(item.img2)} src={item.img2} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
           </div>
           <div className="flex gap-2 h-24 w-auto bg-gray-100 py-2 m-2">
-            <img onClick={() => setGambar(item.img3)} src={item.img3} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            <img onClick={() => setGambar(item.img3)} src={item.img3} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
           </div>
           <div className="flex gap-2 h-24 w-auto bg-gray-100 py-2 m-2">
-            <img onClick={() => setGambar(item.img4)} src={item.img4} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            <img onClick={() => setGambar(item.img4)} src={item.img4} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
           </div>
           <div className="flex gap-2 h-24 w-auto bg-gray-100 py-2 m-2">
-            <img onClick={() => setGambar(item.img)} src={item.img} alt={pink} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
+            <img onClick={() => setGambar(item.img)} src={item.img} className="w-auto h-20 hover:scale-110 transition-transform duration-500 ease-in-out" />
           </div>
         </div>
       </div>
@@ -66,7 +77,9 @@ const MainContent = ({ item }) => {
         </div>
         <div className="flex flex-row shadow-sm mt-3 gap-4 p-6">
           <button className="flex justify-center items-center w-36 px-3 bg-green-700 rounded-2xl text-white hover:bg-green-900">Buy Now</button>
-          <button className="flex justify-center items-center w-40 px-9 border border-green-800 rounded-2xl text-green-700 hover:bg-green-800 hover:text-white">Add to Cart</button>
+          <button onClick={onSubmit} className="flex justify-center items-center w-40 px-9 border border-green-800 rounded-2xl text-green-700 hover:bg-green-800 hover:text-white">
+            Add to Cart
+          </button>
         </div>
       </div>
     </section>

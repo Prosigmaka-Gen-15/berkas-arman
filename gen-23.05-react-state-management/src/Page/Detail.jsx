@@ -12,7 +12,7 @@ const Detail = () => {
 
   const getProduct = async () => {
     try {
-      const response = await axios.get(" http://localhost:3001/posts/" + productId);
+      const response = await axios.get("http://localhost:3001/posts/" + productId);
       setItem(response.data);
     } catch (e) {
       console.log(e.message);

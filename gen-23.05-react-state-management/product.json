@@ -5,10 +5,10 @@
       "namaProduct": "Wireless Earbuds",
       "hargaProduct": "159.000",
       "KeteranganProduct": "Pariatur labore mollit aute deserunt ex.",
-      "img": "/src/img/Wireless Earbuds.jpg",
-      "img2": "/src/img/Wireless Earbuds2",
-      "img3": "/src/img/Wireless Earbuds3",
-      "img4": "/src/img/Wireless Earbuds4"
+      "img": "./src/img/Wireless Earbuds.jpg",
+      "img2": "./src/img/Wireless Earbuds2.jpg",
+      "img3": "./src/img/Wireless Earbuds3.jpg",
+      "img4": "./src/img/Wireless Earbuds4.jpg"
     },
     {
       "id": 2,

@@ -1,8 +1,21 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { AddProduct } from "../Store/ProductSlice";
 
 const Card = ({ productId, image, name, price, desc }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handlesubmit = () => {
+    const data = {
+      nama: name,
+      harga: price,
+      gambar: image,
+    };
+    dispatch(AddProduct(data));
+  };
+
   return (
     <div className="flex flex-col gap-2 h-full">
       <div className="flex items-center justify-center bg-gray-100 rounded-xl px-4 py-4 ">
@@ -16,7 +29,9 @@ const Card = ({ productId, image, name, price, desc }) => {
         <p>{desc}</p>
       </div>
       <div className="flex items-center">
-        <button className="transition ease-in-out duration-300 flex justify-center border border-black rounded-3xl px-4 py-1 font-semibold hover:bg-green-700 hover:text-white hover:border-green-700">Add to Cart</button>
+        <button onClick={handlesubmit} className="transition ease-in-out duration-300 flex justify-center border border-black rounded-3xl px-4 py-1 font-semibold hover:bg-green-700 hover:text-white hover:border-green-700">
+          Add to Cart
+        </button>
       </div>
     </div>
   );

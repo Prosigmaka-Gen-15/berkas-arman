@@ -25,7 +25,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div className="h-screen border-r border-gray-800 w-64 text-white bg-gray-950">
+    <div className="flex flex-col h-screen w-64 text-white bg-gray-950  py-6 px-9 ">
       <div className="flex flex-row justify-center items-center">
         <h1 onClick={() => navigate("/")} className="font-semibold items-center justify-center m-4 cursor-pointer">
           Product
@@ -33,7 +33,7 @@ const Sidebar = () => {
       </div>
       <div className="flex flex-row justify-center items-center">
         <ul>
-          <img className="w-24 h-22 rounded-full" src={avatar} alt="avatar" />
+          <img onClick={() => navigate("/")} className="w-24 h-22 rounded-full cursor-pointer" src={avatar} alt="avatar" />
           {menu.map((val, index) => {
             return (
               <li key={index} className="flex flex-row items-center mt-7 cursor-pointer">
