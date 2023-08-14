@@ -32,7 +32,7 @@ const Card = ({ productId, image, name, price, desc }) => {
       </div>
       <div onClick={() => navigate("/detail/" + productId)} className="flex flex-row justify-between cursor-pointer">
         <h1 className="text-xl font-semibold">{name}</h1>
-        <h1 className="text-xl font-semibold">Rp. {price}</h1>
+        <h1 className="text-xl font-semibold">Rp {parseInt(price).toLocaleString()}</h1>
       </div>
       <div className="flex items-center">
         <p>{desc}</p>

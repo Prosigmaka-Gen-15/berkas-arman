@@ -16,7 +16,7 @@ const Keranjang = () => {
             </div>
             <div className="flex items-center cursor-pointer text-xl gap-5 font-semibold">
               <h1>{cart.nama}</h1>
-              <h1>Rp.{cart.harga * cart.amount}</h1>
+              <h1>Rp {parseInt(cart.harga * cart.amount).toLocaleString()}</h1>
             </div>
             <div className="flex text-xl font-semibold items-center justify-center">
               <div className="flex flex-row w-24 justify-between px-3 py-1 border border-gray-400 items-center rounded-full bg-gray-200">

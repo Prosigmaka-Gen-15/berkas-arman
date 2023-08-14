@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { selectCartCount } from "../store/Selectors";
 
 const Pembayaran = () => {
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
+  const cartCount = useSelector(selectCartCount);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("");
   const [selectedShipping, setSelectedShipping] = useState(0);
-  const jasaPengiriman = 90;
-  const biayaAdmin = 1000;
+  const [biayaAdmin, setBiayaAdmin] = useState(0);
 
   const totalPrice = cart.reduce((total, cart) => total + cart.harga * cart.amount, 0);
 
   const submitCheckOut = () => {
-    alert("berhasil !! silahkan pesan lagi :) ");
+    if (selectedPaymentMethod === "") return alert("Pilih metode pembayaran");
+    if (selectedShipping === "") return alert("Pilih pilih opsi pengiriman");
+    alert("berhasil !! silahkan pesan lagi ");
     window.location.reload(navigate("/"));
   };
 
@@ -21,9 +25,9 @@ const Pembayaran = () => {
     setSelectedShipping(selectedValue);
   };
   const optionsPengiriman = [
-    { nama: "JNE", harga: 100 },
-    { nama: "JNT", harga: 150 },
-    { nama: "SiCepat", harga: 200 },
+    { nama: "JNE", harga: 10000 },
+    { nama: "JNT", harga: 10500 },
+    { nama: "SiCepat", harga: 20000 },
   ];
 
   const totalPriceFinal = cart.reduce((total, item) => total + item.harga * item.amount, 0) + selectedShipping + biayaAdmin;
@@ -48,25 +52,50 @@ const Pembayaran = () => {
   const detailPembayaran = [
     {
       nama: "Subtotal Produk",
-      total: totalPrice,
+      total: parseInt(totalPrice)?.toLocaleString(),
       className: "text-right p-2 mx-2",
     },
     {
       nama: "Total Ongkos Kirim",
-      total: selectedShipping,
+      total: parseInt(selectedShipping)?.toLocaleString(),
       className: "text-right p-2 mx-2",
     },
     {
       nama: "Biaya Layanan",
-      total: "1.000",
+      total: parseInt(biayaAdmin)?.toLocaleString(),
       className: "text-right p-2 mx-2",
     },
     {
       nama: "Total Pembayaran",
-      total: totalPriceFinal,
+      total: parseInt(totalPriceFinal)?.toLocaleString(),
       className: "text-xl text-red-600 font-bold text-right p-2 mx-2",
     },
   ];
+
+  const handlePaymentMethodChange = (nama) => {
+    switch (nama) {
+      case "COD (Cash On Delivery)":
+        setBiayaAdmin(0);
+        break;
+      case "ShopePay":
+        setBiayaAdmin(1500);
+        break;
+      case "BCA":
+        setBiayaAdmin(6000);
+        break;
+      case "MANDIRI":
+        setBiayaAdmin(5000);
+        break;
+      case "Kartu Kredit / Debit":
+        setBiayaAdmin(10000);
+        break;
+      default:
+        setBiayaAdmin(0);
+        break;
+    }
+    setSelectedPaymentMethod(nama);
+  };
+
   return (
     <div>
       {/* header */}
@@ -77,7 +106,7 @@ const Pembayaran = () => {
           </div>
           <div className="flex flex-col lg:flex-row list-none gap-2 lg:gap-4 font-semibold text-sm items-center lg:pl-10 cursor-pointer">
             <input type="search" className="rounded-xl p-2" placeholder="Search Product" />
-            <li>Check Out</li>
+            <li onClick={() => navigate("/keranjang")}>Cart ({cartCount})</li>
           </div>
         </section>
       </nav>
@@ -97,21 +126,21 @@ const Pembayaran = () => {
               {cart.map((cart, id) => {
                 return (
                   <tr>
-                    <td className="flex flex-row gap-4 items-center p-2">
+                    <td className="flex flex-row gap-4 items-center p-2 font-semibold">
                       <img src={cart.gambar} className="h-16" />
                       {cart.nama}
                     </td>
-                    <td className="text-center">Rp. {cart.harga}</td>
+                    <td className="text-center">Rp. {parseInt(cart.harga)?.toLocaleString()}</td>
                     <td className="text-center">{cart.amount}</td>
-                    <td className="text-center">{cart.amount * cart.harga}</td>
+                    <td className="text-center">{parseInt(cart.amount * cart.harga)?.toLocaleString()}</td>
                   </tr>
                 );
               })}
               <tr>
                 <td className="text-right font-bold p-2" colSpan={3}>
-                  Sub total Product ({totalPrice} )
+                  Sub total Product ({parseInt(totalPrice)?.toLocaleString()} )
                 </td>
-                <td className="text-center p-2 text-red-600 font-bold">Rp{totalPrice}</td>
+                <td className="text-center p-2 text-red-600 font-bold">Rp{parseInt(totalPrice)?.toLocaleString()}</td>
               </tr>
               <tr>
                 <td className="font-bold text-right p-2" colSpan={3}>
@@ -137,7 +166,11 @@ const Pembayaran = () => {
             <h1 className="text-lg font-bold">Metode Pembayaran</h1>
             {metodePembayaran.map((metode, index) => {
               return (
-                <button key={index} className="bg-green-400 rounded-md p-2 font-semibold hover:bg-green-600">
+                <button
+                  key={index}
+                  className={`bg-green-400 rounded-md p-2 font-semibold hover:bg-green-600 ${selectedPaymentMethod === metode.nama ? "bg-green-600" : ""}`}
+                  onClick={() => handlePaymentMethodChange(metode.nama)} // Step 3: Call the function
+                >
                   {metode.nama}
                 </button>
               );

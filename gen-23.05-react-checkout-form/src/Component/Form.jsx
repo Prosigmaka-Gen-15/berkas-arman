@@ -3,6 +3,7 @@ import AddProduct from "./AddProduct";
 import axios from "axios";
 // import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
@@ -10,6 +11,7 @@ const Form = () => {
   const [productIds, setProductIds] = useState(0);
   const user = useSelector((state) => state.auth.user);
   const token = useSelector((state) => state.auth.token);
+  const navigate = useNavigate();
 
   const getProduct = () => {
     axios
@@ -20,6 +22,7 @@ const Form = () => {
       })
       .then((response) => setProduct(response.data))
       .catch((error) => {
+        navigate("/login");
         alert("lu bukan admin");
         console.log(error);
       });
