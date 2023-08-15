@@ -1,0 +1,32 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Page/Home";
+import Detail from "./Page/Detail";
+import Admin from "./Page/Admin";
+import Shop from "./Page/Shop";
+import Login from "./Page/Login";
+import PrivateRoute from "./Component/Route/privateRoute";
+import GuestRoute from "./Component/Route/GuestRoutes";
+import Pembayaran from "./Page/Pembayaran";
+import DetailPemesanan from "./Page/DetailPemesanan";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/detail/:productId" element={<Detail />} />
+        <Route path="/keranjang" element={<Shop />} />
+        <Route path="/keranjang/pembayaran" element={<Pembayaran />} />
+        <Route path="/riwayatPemesanan" element={<DetailPemesanan />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/admin" element={<Admin />} />
+        </Route>
+        <Route element={<GuestRoute />}>
+          <Route path="/login" element={<Login />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
